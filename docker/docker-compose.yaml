@@ -1,0 +1,13 @@
+---
+
+version: "2"
+services:
+  dnsutils:
+    image: tutum/dnsutils
+    mem_swappiness: 0
+    tty: true
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /run
+      - /tmp
